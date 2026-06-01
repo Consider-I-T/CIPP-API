@@ -101,6 +101,14 @@ jobs:
           VERSION=$(cat version_latest.txt | tr -d '[:space:]')
           SHORT_SHA="${GITHUB_SHA::7}"
           echo "{\"version\": \"${VERSION}\", \"commit\": \"${SHORT_SHA}\"}" > version.json
+          
+      - name: Install Required PowerShell Modules
+        shell: pwsh
+        run: |
+          Install-Module -Name Configuration -Force -Scope CurrentUser
+          Install-Module -Name ModuleBuilder -Force -Scope CurrentUser
+
+
 
       - name: Build and stage modules
         shell: pwsh
