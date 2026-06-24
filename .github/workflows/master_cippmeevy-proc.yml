@@ -27,4 +27,4 @@ jobs:
           app-name: 'cippmeevy-proc'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_21A895E828504F2DBE9A960E22496BE3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_43845E3AA5814E8494727F2B30C7D86E }}
